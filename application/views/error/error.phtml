@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4><?php echo $exception->getFile(); ?> 第 <?php echo $exception->getLine(); ?>
+            行，错误号：<?php echo $exception->getCode(); ?></h4>
+    </div>
+    <div class="panel-body">
+        <div class="alert alert-warning" role="alert"><?php echo $exception->getMessage(); ?></div>
+    </div>
+</div>
+
