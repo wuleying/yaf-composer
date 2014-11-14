@@ -32,4 +32,15 @@ class Bootstrap extends Yaf_Bootstrap_Abstract {
     public function _initTimeZone(Yaf_Dispatcher $dispatcher) {
         date_default_timezone_set(Yaf_Registry::get('config')->application->default->timezone);
     }
+
+    /**
+     * Method  _initComposerAutoload
+     *
+     * @author luoliang1
+     *
+     * @param $dispatcher
+     */
+    public function _initComposerAutoload($dispatcher) {
+        Yaf_Loader::import(APPLICATION_PATH . '/library/vendor/autoload.php');
+    }
 }
